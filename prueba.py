@@ -22,4 +22,5 @@ def consulta(id=None):
 def hello(name=None):
     return render_template('index.html', name=name)
 
-app.run(debug=True, port=8000)
+if __name__ == '__main__':
+    app.run()
