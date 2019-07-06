@@ -9,14 +9,14 @@ from selenium.common.exceptions import NoSuchElementException, WebDriverExceptio
 from selenium.webdriver.chrome.options import Options
 import os
 
-#CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedriver')
-#GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
-#options = Options()
-#options.binary_location = GOOGLE_CHROME_BIN
-#options.add_argument('--disable-gpu')
-#options.add_argument('--no-sandbox')
-#options.headless = True
-#driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
+CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedriver')
+GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
+options = Options()
+options.binary_location = GOOGLE_CHROME_BIN
+options.add_argument('--disable-gpu')
+options.add_argument('--no-sandbox')
+options.headless = True
+driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
 
 
 current_directory = "NONe"
@@ -36,7 +36,7 @@ def consulta(client_id=None):
 
 @app.route('/api/factura/aguasandinas/<client_id>')
 def hello(client_id=None):
-    driver = webdriver.Chrome(executable_path='C:\chromedriver_win32\chromedriver.exe')
+    #driver = webdriver.Chrome(executable_path='C:\chromedriver_win32\chromedriver.exe')
     driver.get("https://www.aguasandinas.cl/web/aguasandinas/pagar-mi-cuenta")
     actual =str(client_id[:client_id.find("-")])
     elem = driver.find_element_by_id("busqueda_n_cuenta")
