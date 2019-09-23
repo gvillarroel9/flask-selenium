@@ -18,7 +18,6 @@ options.add_argument('--no-sandbox')
 options.headless = True
 
 
-
 current_directory = "NONe"
 app = Flask(__name__)
 CORS(app)
@@ -58,6 +57,14 @@ def hello(client_id=None):
     name=content3[3].text
     driver.close()
     return jsonify({'factura': name})
+
+@app.route('/api/cat/<client_id>')
+def cat(client_id=None):
+    #driver = webdriver.PhantomJS(executable_path='C:\chromedriver_win32\phantomjs.exe')
+    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
+    driver.get("https://parts.cat.com/en/finningchile/"+client_id)
+    name = driver.find_elements_by_css_selector('.main_header')   
+    return jsonify({'nombre': name[1].text})
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,13 @@
+[INFO  - 2019-09-23T23:19:43.738Z] GhostDriver - Main - running on port 55899
+[INFO  - 2019-09-23T23:19:47.938Z] Session [a2adfab0-de58-11e9-90f5-2921cacee40b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2019-09-23T23:19:47.938Z] Session [a2adfab0-de58-11e9-90f5-2921cacee40b] - page.customHeaders:  - {}
+[INFO  - 2019-09-23T23:19:47.938Z] Session [a2adfab0-de58-11e9-90f5-2921cacee40b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2019-09-23T23:19:47.938Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: a2adfab0-de58-11e9-90f5-2921cacee40b
+[ERROR - 2019-09-23T23:20:31.797Z] Session [a2adfab0-de58-11e9-90f5-2921cacee40b] - page.onError - msg: This site overrides Array.from() with an implementation that doesn't support iterables, which could cause Google Maps JavaScript API v3 to not work correctly.
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-09-23T23:20:31.798Z] Session [a2adfab0-de58-11e9-90f5-2921cacee40b] - page.onError - stack:
+  Kh (https://maps.googleapis.com/maps/api/js?v=3&client=gme-caterpillarinc&language=en:123)
+
+  phantomjs://platform/console++.js:263 in error
+[INFO  - 2019-09-23T23:21:04.251Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
