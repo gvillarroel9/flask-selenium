@@ -12,6 +12,8 @@ import os
 CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedriver')
 GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
 options = Options()
+PROXY = "186.103.148.204:3128"
+options.add_argument('--proxy-server=http://%s' % PROXY)
 options.binary_location = GOOGLE_CHROME_BIN
 options.add_argument('--disable-gpu')
 options.add_argument('--no-sandbox')
@@ -58,7 +60,18 @@ def hello(client_id=None):
     driver.close()
     return jsonify({'factura': name})
 
+@app.route('/api/cat/<client_id>')
+def cat(client_id=None):
+    
+    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
 
+    driver.get("https://parts.cat.com/en/finningchile/"+client_id)
+    name = driver.find_elements_by_css_selector('.main_header')
+    time.sleep(1)
+    price = driver.find_elements_by_css_selector('.pdp_price_new')
+    time.sleep(1)
+    driver.close()
+    return jsonify({'nombre': name[1].text, 'price': price[0].text, 'priceAux': price[1].text})
 
 
 if __name__ == '__main__':
