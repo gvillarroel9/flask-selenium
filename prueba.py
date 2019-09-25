@@ -60,11 +60,22 @@ def hello(client_id=None):
 
 @app.route('/api/cat/<client_id>')
 def cat(client_id=None):
+    PROXY = "186.103.148.204:3128" # IP:PORT or HOST:PORT
+
+    #chrome_options = webdriver.ChromeOptions()
+    options.add_argument('--proxy-server=http://%s' % PROXY)
+
+    #driver = webdriver.Chrome(executable_path='C:\chromedriver_win32\chromedriver.exe',chrome_options=chrome_options)
+
     #driver = webdriver.PhantomJS(executable_path='C:\chromedriver_win32\phantomjs.exe')
     driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
     driver.get("https://parts.cat.com/en/finningchile/"+client_id)
-    name = driver.find_elements_by_css_selector('.main_header')   
-    return jsonify({'nombre': name[1].text})
+    name = driver.find_elements_by_css_selector('.main_header')
+    time.sleep(1)
+    price = driver.find_elements_by_css_selector('.pdp_price_new')
+    time.sleep(1)
+    return jsonify({'nombre': name[1].text, 'price': price[0].text, 'priceAux': price[1].text})
+
 
 if __name__ == '__main__':
     app.run(debug=True)

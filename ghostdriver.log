@@ -1,13 +1,74 @@
-[INFO  - 2019-09-23T23:19:43.738Z] GhostDriver - Main - running on port 55899
-[INFO  - 2019-09-23T23:19:47.938Z] Session [a2adfab0-de58-11e9-90f5-2921cacee40b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2019-09-23T23:19:47.938Z] Session [a2adfab0-de58-11e9-90f5-2921cacee40b] - page.customHeaders:  - {}
-[INFO  - 2019-09-23T23:19:47.938Z] Session [a2adfab0-de58-11e9-90f5-2921cacee40b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2019-09-23T23:19:47.938Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: a2adfab0-de58-11e9-90f5-2921cacee40b
-[ERROR - 2019-09-23T23:20:31.797Z] Session [a2adfab0-de58-11e9-90f5-2921cacee40b] - page.onError - msg: This site overrides Array.from() with an implementation that doesn't support iterables, which could cause Google Maps JavaScript API v3 to not work correctly.
+[INFO  - 2019-09-24T18:58:02.900Z] GhostDriver - Main - running on port 57058
+[INFO  - 2019-09-24T18:58:07.035Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2019-09-24T18:58:07.035Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - page.customHeaders:  - {}
+[INFO  - 2019-09-24T18:58:07.035Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2019-09-24T18:58:07.035Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 3ea00f40-defd-11e9-9590-278d89581fd5
+[ERROR - 2019-09-24T18:58:18.655Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - page.onError - msg: ReferenceError: Can't find variable: MicroModal
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2019-09-23T23:20:31.798Z] Session [a2adfab0-de58-11e9-90f5-2921cacee40b] - page.onError - stack:
+[ERROR - 2019-09-24T18:58:18.655Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - page.onError - stack:
+  global code (https://parts.cat.com/wcsstore/CATSAS/javascript/Vendor/micromodal.min.20190918093423.js:134)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-09-24T18:58:21.219Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - page.onError - msg: Error: defineAlreadyDefined
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-09-24T18:58:21.220Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - page.onError - stack:
+  (anonymous function) (https://parts.cat.com/wcsstore/dojo18/dojo/dojo.js:14)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-09-24T18:58:23.449Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - page.onError - msg: Error: multipleDefine
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-09-24T18:58:23.450Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - page.onError - stack:
+  (anonymous function) (https://parts.cat.com/wcsstore/dojo18/dojo/dojo.js:14)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-09-24T18:58:23.450Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - page.onError - msg: Error: multipleDefine
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-09-24T18:58:23.450Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - page.onError - stack:
+  (anonymous function) (https://parts.cat.com/wcsstore/dojo18/dojo/dojo.js:14)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-09-24T18:58:35.372Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - page.onError - msg: This site overrides Array.from() with an implementation that doesn't support iterables, which could cause Google Maps JavaScript API v3 to not work correctly.
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-09-24T18:58:35.372Z] Session [3ea00f40-defd-11e9-9590-278d89581fd5] - page.onError - stack:
   Kh (https://maps.googleapis.com/maps/api/js?v=3&client=gme-caterpillarinc&language=en:123)
 
   phantomjs://platform/console++.js:263 in error
-[INFO  - 2019-09-23T23:21:04.251Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T19:03:02.903Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T19:08:02.903Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T19:13:03.075Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T19:18:02.946Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T19:23:02.938Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T19:28:02.991Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T19:33:03.002Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T19:38:03.004Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T19:43:03.073Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T19:48:03.303Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T19:53:03.199Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T19:58:03.260Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T20:03:03.251Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T20:08:03.276Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T20:13:03.314Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T20:18:03.344Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T20:23:03.345Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T20:28:03.344Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T20:33:03.345Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T20:38:03.382Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T20:43:03.382Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T20:48:03.382Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T20:53:03.382Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T20:58:03.418Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T21:03:03.422Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T21:08:03.422Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T21:13:03.422Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T21:18:03.458Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T21:23:03.460Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T21:01:17.339Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T21:06:17.340Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T21:11:17.340Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T21:16:17.376Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-09-24T21:21:17.378Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
