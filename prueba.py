@@ -74,6 +74,7 @@ def cat(client_id=None):
     time.sleep(1)
     price = driver.find_elements_by_css_selector('.pdp_price_new')
     time.sleep(1)
+    driver.close()
     return jsonify({'nombre': name[1].text, 'price': price[0].text, 'priceAux': price[1].text})
 
 
