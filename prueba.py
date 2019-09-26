@@ -75,7 +75,7 @@ def cat(client_id=None):
 def catv2(client_id=None):
     driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
     driver.get("https://parts.cat.com/en/finningchile/"+client_id)
-    driver.get("https://parts.cat.com/CATFetchDealerPriceControllerCmd?globalItems="+client_id+"-PRODUCT&storeId=20261&langId=-24&catalogId=10051&outputData=0&fromPage=pdpPage&scQty=1")
+    driver.get("https://parts.cat.com/CATFetchDealerPriceControllerCmd?globalItems="+client_id.upper()+"-PRODUCT&storeId=20261&langId=-24&catalogId=10051&outputData=0&fromPage=pdpPage&scQty=1")
     elem = driver.find_elements_by_tag_name("pre")
     time.sleep(1)
     return elem[0].text
