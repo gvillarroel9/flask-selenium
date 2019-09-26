@@ -71,6 +71,15 @@ def cat(client_id=None):
     time.sleep(2)
     return jsonify({'nombre': name[1].text, 'price': price[0].text, 'priceAux': price[1].text})
 
+@app.route('/apiv2/cat/<client_id>')
+def cat(client_id=None):
+    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
+    driver.get("https://parts.cat.com/en/finningchile/"+client_id)
+    driver.get("https://parts.cat.com/CATFetchDealerPriceControllerCmd?globalItems="+client_id+"-PRODUCT&storeId=20261&langId=-24&catalogId=10051&outputData=0&fromPage=pdpPage&scQty=1")
+    elem = driver.find_elements_by_tag_name("pre")
+    return elem[0].text
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
