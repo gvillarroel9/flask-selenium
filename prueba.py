@@ -64,13 +64,11 @@ def hello(client_id=None):
 def cat(client_id=None):
     
     driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
-
     driver.get("https://parts.cat.com/en/finningchile/"+client_id)
     name = driver.find_elements_by_css_selector('.main_header')
-    time.sleep(1)
+    time.sleep(2)
     price = driver.find_elements_by_css_selector('.pdp_price_new')
-    time.sleep(1)
-    driver.close()
+    time.sleep(2)
     return jsonify({'nombre': name[1].text, 'price': price[0].text, 'priceAux': price[1].text})
 
 
