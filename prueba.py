@@ -13,7 +13,7 @@ CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedr
 GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
 options = Options()
 PROXY = "186.103.148.204:3128"
-#options.add_argument('--proxy-server=http://%s' % PROXY)
+options.add_argument('--proxy-server=http://%s' % PROXY)
 options.binary_location = GOOGLE_CHROME_BIN
 options.add_argument('--disable-gpu')
 options.add_argument('--no-sandbox')
