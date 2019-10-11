@@ -12,8 +12,6 @@ import os
 CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedriver')
 GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
 options = Options()
-PROXY = "186.103.148.204:3128"
-options.add_argument('--proxy-server=http://%s' % PROXY)
 options.binary_location = GOOGLE_CHROME_BIN
 options.add_argument('--disable-gpu')
 options.add_argument('--no-sandbox')
@@ -60,25 +58,25 @@ def hello(client_id=None):
     driver.close()
     return jsonify({'factura': name})
 
-@app.route('/api/cat/<client_id>')
-def cat(client_id=None):
+#@app.route('/api/cat/<client_id>')
+#def cat(client_id=None):
     
-    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
-    driver.get("https://parts.cat.com/en/finningchile/"+client_id)
-    name = driver.find_elements_by_css_selector('.main_header')
-    time.sleep(2)
-    price = driver.find_elements_by_css_selector('.pdp_price_new')
-    time.sleep(2)
-    return jsonify({'nombre': name[1].text, 'price': price[0].text, 'priceAux': price[1].text})
+#    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
+#    driver.get("https://parts.cat.com/en/finningchile/"+client_id)
+#    name = driver.find_elements_by_css_selector('.main_header')
+#    time.sleep(2)
+#    price = driver.find_elements_by_css_selector('.pdp_price_new')
+#    time.sleep(2)
+#    return jsonify({'nombre': name[1].text, 'price': price[0].text, 'priceAux': price[1].text})
 
-@app.route('/apiv2/cat/<client_id>')
-def catv2(client_id=None):
-    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
-    driver.get("https://parts.cat.com/en/finningchile/"+client_id)
-    driver.get("https://parts.cat.com/CATFetchDealerPriceControllerCmd?globalItems="+client_id.upper()+"-PRODUCT&storeId=20261&langId=-24&catalogId=10051&outputData=0&fromPage=pdpPage&scQty=1")
-    elem = driver.find_elements_by_tag_name("pre")
-    time.sleep(1)
-    return elem[0].text
+#@app.route('/apiv2/cat/<client_id>')
+#def catv2(client_id=None):
+#    driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=options)
+#    driver.get("https://parts.cat.com/en/finningchile/"+client_id)
+#    driver.get("https://parts.cat.com/CATFetchDealerPriceControllerCmd?globalItems="+client_id.upper()+"-PRODUCT&storeId=20261&langId=-24&catalogId=10051&outputData=0&fromPage=pdpPage&scQty=1")
+#    elem = driver.find_elements_by_tag_name("pre")
+#    time.sleep(1)
+#    return elem[0].text
 
 
 
