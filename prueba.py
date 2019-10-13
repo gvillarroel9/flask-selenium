@@ -12,6 +12,8 @@ import os
 CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH', '/usr/local/bin/chromedriver')
 GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN', '/usr/bin/google-chrome')
 options = Options()
+prefs = {'profile.managed_default_content_settings.images':2,'disk-cache-size': 4096}
+chromeOptions.add_experimental_option("prefs", prefs)
 options.binary_location = GOOGLE_CHROME_BIN
 options.add_argument('--disable-gpu')
 options.add_argument('--no-sandbox')
